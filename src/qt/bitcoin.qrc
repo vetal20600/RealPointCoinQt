@@ -43,8 +43,6 @@
         <file alias="debugwindow">res/icons/debugwindow.png</file>
         <file alias="staking_off">res/icons/staking_off.png</file>
         <file alias="staking_on">res/icons/staking_on.png</file>
-        <file>../../../../../../Downloads/files3/rlp.icns</file>
-        <file>../../../../../../Downloads/atch_/AppLogo/appicon.qrc</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

@@ -391,7 +391,12 @@ def deployPlugins(appBundleInfo, deploymentInfo, strip, verbose):
                 # Deploy the opengl graphicssystem plugin only if QtOpenGL is in use
                 if not deploymentInfo.usesFramework("QtOpenGL"):
                     continue
+            elif pluginName.endswith(".DS_Store"):
+                # Skip debug plugins
+                #print "THIS"
+                continue
             
+            print "Plugins: dir ", pluginDirectory, " name ",pluginName, ""
             plugins.append((pluginDirectory, pluginName))
     
     for pluginDirectory, pluginName in plugins:
@@ -571,7 +576,7 @@ try:
 except RuntimeError as e:
     if verbose >= 1:
         sys.stderr.write("Error: %s\n" % str(e))
-    sys.exit(ret)
+    sys.exit(1)
 
 # ------------------------------------------------
 
@@ -584,7 +589,7 @@ if config.plugins:
     except RuntimeError as e:
         if verbose >= 1:
             sys.stderr.write("Error: %s\n" % str(e))
-        sys.exit(ret)
+        sys.exit(1)
 
 # ------------------------------------------------
 
