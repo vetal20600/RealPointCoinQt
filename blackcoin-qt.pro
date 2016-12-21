@@ -448,4 +448,4 @@ contains(RELEASE, 1) {
 system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)
 
 OBJECTIVE_SOURCES += \
-    ../../../../Downloads/macnotificationhandler.mm
+    src/qt/macnotificationhandler.mm
