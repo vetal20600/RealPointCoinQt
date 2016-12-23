@@ -330,6 +330,7 @@ def deployFrameworks(frameworks, bundlePath, binaryPath, strip, verbose, deploym
         
         for dependency in dependencies:
             changeInstallName(dependency.installName, dependency.deployedInstallName, deployedBinaryPath, verbose)
+            #print "Plugins: dep_name ", dependency.installName
             
             # Deploy framework if necessary.
             if dependency.frameworkName not in deploymentInfo.deployedFrameworks and dependency not in frameworks:
