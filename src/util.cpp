@@ -961,7 +961,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
     const char* pszModule = "realpointcoin";
-    //const char* pszModule = "blackcoin";
+
 #endif
     if (pex)
         return strprintf(
@@ -1004,14 +1004,14 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BlackCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BlackCoin
-    // Mac: ~/Library/Application Support/BlackCoin
-    // Unix: ~/.blackcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\RealPointCoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\RealPointCoin
+    // Mac: ~/Library/Application Support/RealPointCoin
+    // Unix: ~/.realpointcoin
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "RealPointCoin";
-    //return GetSpecialFolderPath(CSIDL_APPDATA) / "BlackCoin";
+
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1069,7 +1069,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 boost::filesystem::path GetConfigFile()
 {
     boost::filesystem::path pathConfigFile(GetArg("-conf", "realpointcoin.conf"));
-    //boost::filesystem::path pathConfigFile(GetArg("-conf", "blackcoin.conf"));
+
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }

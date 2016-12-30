@@ -12,7 +12,7 @@ Laszlo Hanyecz <solar@heliacal.net>
 Douglas Huff <dhuff@jrbobdobbs.org>
 
 
-See readme-qt.rst for instructions on building BlackCoin QT, the
+See readme-qt.rst for instructions on building RealPointCoin QT, the
 graphical user interface.
 
 Tested on 10.5 and 10.6 intel.  PPC is not supported because it's big-endian.
@@ -36,7 +36,7 @@ git clone git@github.com:rat4/blackcoin.git blackcoin
 
 3.  Install dependencies from MacPorts
 
-sudo port install boost db48 openssl miniupnpc
+sudo port install boost db48 openssl miniupnpc 
 
 Optionally install qrencode (and set USE_QRCODE=1):
 sudo port install qrencode

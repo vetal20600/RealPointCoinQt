@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
-        QMessageBox::critical(0, "RealPointCoin",
+        QMessageBox::critical(0, "RPC",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -147,9 +147,9 @@ int main(int argc, char *argv[])
     app.setOrganizationName("RealPointCoin");
     //XXX app.setOrganizationDomain("");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        app.setApplicationName("RealPointCoin-Qt-testnet");
+        app.setApplicationName("RPC-testnet");
     else
-        app.setApplicationName("RealPointCoin-Qt");
+        app.setApplicationName("RPC");
 
     // ... then GUI settings:
     OptionsModel optionsModel;

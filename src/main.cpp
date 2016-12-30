@@ -988,7 +988,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	}
     //ChangedForRealPointCoin
     if (nHeight >= 20000) {
-        nSubsidy = 500 * COIN;
+        nSubsidy = 650 * COIN;
     }
 
     if (fDebug && GetBoolArg("-printcreation"))
